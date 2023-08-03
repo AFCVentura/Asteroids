@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_asteroid2_pieces",
+  "name": "obj_asteroid2_shards",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
@@ -12,7 +12,10 @@
     "name": "Objetos",
     "path": "folders/Objetos.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_parente_asteroide",
+    "path": "objects/obj_parente_asteroide/obj_parente_asteroide.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -29,8 +32,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_asteroid2_leftplace",
-    "path": "sprites/spr_asteroid2_leftplace/spr_asteroid2_leftplace.yy",
+    "name": "spr_asteroid2_shards",
+    "path": "sprites/spr_asteroid2_shards/spr_asteroid2_shards.yy",
   },
   "spriteMaskId": null,
   "visible": true,
