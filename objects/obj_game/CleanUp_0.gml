@@ -1,0 +1,2 @@
+part_type_destroy(global.particula_asteroide);
+part_system_destroy(global.sistema_particulas);
