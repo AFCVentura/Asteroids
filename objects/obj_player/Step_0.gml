@@ -1,3 +1,16 @@
+spd = speed
+/*
+if (x < 300) {
+	x += spd
+	obj_terra.image_angle = (x - (spd*2)) / 150 + obj_terra.rotacao_terra
+}
+if (x > room_width - 300) {
+	x -= spd
+	obj_terra.image_angle = (x + (spd*2)) / 150 + obj_terra.rotacao_terra
+}
+if (y < 20) {y += spd}
+if (y > room_height - 20) {y -= spd}
+*/
 
 if keyboard_check_pressed(vk_space)
 {
@@ -20,16 +33,27 @@ if keyboard_check_pressed(vk_space)
 if keyboard_check(ord("W"))
 {
 	speed = var_velocidade
-	sprite_index = spr_player_moving 
+	sprite_index = spr_player_moving
+	if !place_free(x-spd-2, y-spd-2) || !place_free(x+spd+2, y+spd+2)
+	{
+	speed = 0
+	sprite_index = spr_player_moving
+	}
 }
 else if keyboard_check(ord("S"))
 {
 	speed = -var_velocidade
 	sprite_index = spr_player_moving
+	
+	if !place_free(x-spd-2, y-spd-2) || !place_free(x+spd+2, y+spd+2)
+	{
+	speed = 0
+	sprite_index = spr_player_moving
+	}
 }
 else
 {
-	speed = lerp(speed, 0, 0.06)
+	speed = 0
 	sprite_index = spr_player_idle
 }
 
@@ -56,5 +80,3 @@ if vida_player <= 0
 {
 	game_restart()
 }
-
-move_wrap(true, true, 10)

@@ -1,3 +1,6 @@
+window_set_fullscreen(false)  // Coloca tela cheia
+camera_set_view_pos(view_camera[0], obj_player.x, obj_player.y)
+
 /*SISTEMA DE PARTÍCULAS*/
 global.sistema_particulas = part_system_create_layer("Assets_1", false);
 global.particula_asteroide = part_type_create();
