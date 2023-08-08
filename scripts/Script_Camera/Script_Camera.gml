@@ -1,5 +1,0 @@
-#region Camera
-
-
-
-#endregion

@@ -26,9 +26,9 @@
   "properties": [],
   "solid": true,
   "spriteId": {
-    "name": "Sprite14",
-    "path": "sprites/Sprite14/Sprite14.yy",
+    "name": "spr_collision",
+    "path": "sprites/spr_collision/spr_collision.yy",
   },
   "spriteMaskId": null,
-  "visible": true,
+  "visible": false,
 }

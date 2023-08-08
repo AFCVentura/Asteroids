@@ -1,7 +1,6 @@
-window_set_fullscreen(false)  // Coloca tela cheia
-camera_set_view_pos(view_camera[0], obj_player.x, obj_player.y)
 
-/*SISTEMA DE PARTÍCULAS*/
+
+#region Sistema de Particulas
 global.sistema_particulas = part_system_create_layer("Assets_1", false);
 global.particula_asteroide = part_type_create();
 global.emissor_particulas = part_emitter_create(global.sistema_particulas);
@@ -16,6 +15,7 @@ part_type_direction(global.particula_asteroide, 0, 359, 0, 0)  // definindo dire
 part_type_orientation(global.particula_asteroide, 0, 359, 30, 10, false)  // definindo angulação da particula
 part_type_blend(global.particula_asteroide, false)  // sobreposição de luz
 part_type_life(global.particula_asteroide, 90, 100)  // tempo de vida_asteroid da particula
-/*--------------------------*/
+#endregion
+
 
 
