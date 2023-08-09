@@ -9,10 +9,10 @@ var incremento_direcao = -5
 if alarm[0] <= 0
 {
 	vida_player -= 1
+	alarm[0] = 60
 	
+	alpha_damage = 1
 	
-	
-	alarm[0] = 180
 	
 	// Se o sprite for o do asteróide médio
 	if other.sprite_index = spr_asteroid2
@@ -71,6 +71,9 @@ if alarm[0] <= 0
 		}
 
 	}
+	speed = lerp(1, 0, 0.1)
+	direction = direction_hit
+	sprite_index = spr_player_idle
 }
 
 

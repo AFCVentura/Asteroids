@@ -8,3 +8,6 @@ tempo_a = 0
 tempo_d = 0
 var_bullet_inst = 0
 spaceship_speed = speed
+color_damage = c_red
+alpha_damage = 0
+direction_hit = 0
