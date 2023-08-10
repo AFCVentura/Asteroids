@@ -13,6 +13,11 @@ if alarm[0] <= 0
 	
 	alpha_damage = 1
 	
+	// Zerando o tempo para não ter bug
+	tempo_w = 0
+	tempo_a = 0
+	tempo_s = 0
+	tempo_d = 0
 	
 	// Se o sprite for o do asteróide médio
 	if other.sprite_index = spr_asteroid2

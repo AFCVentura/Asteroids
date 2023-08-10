@@ -9,8 +9,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objetos",
-    "path": "folders/Objetos.yy",
+    "name": "asteroids",
+    "path": "folders/Objetos/asteroids.yy",
   },
   "parentObjectId": {
     "name": "obj_parente_asteroide",

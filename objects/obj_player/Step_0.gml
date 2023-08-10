@@ -1,4 +1,4 @@
-alpha_damage = lerp(alpha_damage, 0, 0.08)
+alpha_damage = lerp(alpha_damage, 0, lerp(0.05, 0.001, 0.001))
 direction_hit = direction - 180
 
 
@@ -11,6 +11,7 @@ y = clamp(y, 30, room_height - 30)
 #endregion
 
 if alarm[0] <= 0 {
+	
 	#region Tiro
 	if keyboard_check_pressed(vk_space)
 	{
@@ -30,13 +31,6 @@ if alarm[0] <= 0 {
 	
 	}
 	#endregion
-
-
-
-
-
-
-
 
 	#region Frente/Trás
 	if keyboard_check(ord("W"))

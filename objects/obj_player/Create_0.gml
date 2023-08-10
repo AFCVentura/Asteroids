@@ -11,3 +11,6 @@ spaceship_speed = speed
 color_damage = c_red
 alpha_damage = 0
 direction_hit = 0
+
+figure_powerup = 0
+text_powerup = 0

@@ -8,8 +8,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objetos",
-    "path": "folders/Objetos.yy",
+    "name": "asteroids",
+    "path": "folders/Objetos/asteroids.yy",
   },
   "parentObjectId": null,
   "persistent": false,
