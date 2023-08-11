@@ -8,6 +8,9 @@ var var_inst_asteroide2_pieces
 var incremento_sprite_shards = 0
 var incremento_direcao = -5
 
+
+
+
 // Se o atingido for o asteróide médio
 if other.sprite_index = spr_asteroid2
 {
@@ -61,6 +64,7 @@ else if other.sprite_index = spr_asteroid1
 			var var_inst_detritus = instance_create_layer(other.x,other.y, "Instances", obj_detritus)
 			var_inst_detritus.direction = other.direction + incremento_direcao
 			var_inst_detritus.speed = other.speed - (other.speed * 0.5)
+			var_inst_detritus.alarm[0] = 180
 		}
 
 

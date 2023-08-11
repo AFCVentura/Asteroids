@@ -36,8 +36,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_player_idle",
-    "path": "sprites/spr_player_idle/spr_player_idle.yy",
+    "name": "spr_spaceship_idle_original",
+    "path": "sprites/spr_spaceship_idle_original/spr_spaceship_idle_original.yy",
   },
   "spriteMaskId": null,
   "visible": true,
