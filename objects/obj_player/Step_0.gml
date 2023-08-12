@@ -22,11 +22,11 @@ else {
 // Impondo limite às variáveis
 x = clamp(x, 50, room_width - 50)
 y = clamp(y, 30, room_height - 30)
-
-
 #endregion
 
 if alarm[0] <= 0 {
+	
+	direction = image_angle
 	
 	#region Tiro
 	if keyboard_check_pressed(vk_space)
@@ -104,10 +104,10 @@ if alarm[0] <= 0 {
 		{  // Checando se o W foi apertado antes...
 			sprite_index = spr_spaceship_moving_original
 			if keyboard_check(ord("W")){  // ... E se o W está sendo apertado também
-				speed = (var_velocidade*2) - var_velocidade
+				speed = (var_velocidade * 2) - var_velocidade
 			}
 			else {  // E se o W não está sendo apertado também
-				speed = -var_velocidade
+				speed = - var_velocidade
 			}
 		}
 		else if !keyboard_check(ord("W")) && !keyboard_check(ord("S"))
@@ -182,11 +182,14 @@ if alarm[0] <= 0 {
 			if keyboard_check(ord("D")){  // ... E se o D está sendo apertado também
 				var_direcao = -4
 				
+				
 			}
 			else {  // E se o D não está sendo apertado também
 				var_direcao = 4
 
 			}
+			direction += var_direcao
+			image_angle = direction
 		}
 
 		else if keyboard_check(ord("D")) && tempo_a < tempo_d
@@ -196,15 +199,12 @@ if alarm[0] <= 0 {
 				
 			}
 			else {  // E se o A não está sendo apertado também
-				var_direcao = -4
-				
+				var_direcao = -4	
 			}
+			direction += var_direcao
+			image_angle = direction
 		}
 	}
-
-
-	direction += var_direcao
-	image_angle = direction
 
 	
 	if keyboard_check(ord("A")) && tempo_a == tempo_d

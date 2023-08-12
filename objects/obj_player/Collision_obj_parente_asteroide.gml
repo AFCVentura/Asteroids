@@ -1,14 +1,14 @@
 // Variáveis
 var var_inst_asteroid1
-var var_inst_asteroide2_pieces
+
 var incremento_sprite_shards = 0
-var incremento_direcao = -5
+var incremento_direcao_shards = -5
+var incremento_direcao_detritus = -1
 
 
 // Se o alarme de cooldown do dano for zero, diminui a vida do player e põe o alarme de novo
 if alarm[0] <= 0
 {
-	
 	closest_instance_from_player = other.id
 	angle_spaceship_asteroid = point_direction(x, y, closest_instance_from_player.x, closest_instance_from_player.y)
 	
@@ -30,12 +30,20 @@ if alarm[0] <= 0
 		with other {
 			repeat (3)
 			{
-				var_inst_asteroide2_pieces = instance_create_layer(self.x,self.y, "Instances", obj_asteroid2_shards)
-				var_inst_asteroide2_pieces.image_index = incremento_sprite_shards
-				var_inst_asteroide2_pieces.direction = obj_player.angle_spaceship_asteroid + incremento_direcao
-				var_inst_asteroide2_pieces.speed = other.speed - (other.speed * 0.50)
-				incremento_direcao += 5
+				var var_inst_asteroide2_shards = instance_create_layer(x,y, "Instances", obj_asteroid2_shards)
+				var_inst_asteroide2_shards.image_index = incremento_sprite_shards
+				var_inst_asteroide2_shards.direction = obj_player.angle_spaceship_asteroid + incremento_direcao_shards
+				var_inst_asteroide2_shards.speed = other.speed - (other.speed * 0.50)
+				incremento_direcao_shards += 5
 				incremento_sprite_shards += 1
+				
+				if other.speed < 1 {
+					var_inst_asteroide2_shards.speed = 1
+				}
+				else {
+					var_inst_asteroide2_shards.speed = other.speed - (other.speed * 0.5)
+				}
+				self.speed = clamp(self.speed, 0.3, infinity)
 				
 			
 			}	
@@ -64,9 +72,9 @@ if alarm[0] <= 0
 			
 			var quant_detritos = random_range(1, 5)
 			for (var i = 1; i <= quant_detritos; i++) {
-				incremento_direcao = random_range(-10, 10)
+				incremento_direcao_detritus = random_range(-10, 10)
 				var var_inst_detritus = instance_create_layer(self.x, self.y, "Instances", obj_detritus)
-				var_inst_detritus.direction = obj_player.angle_spaceship_asteroid + incremento_direcao
+				var_inst_detritus.direction = obj_player.angle_spaceship_asteroid + incremento_direcao_detritus
 				
 				if other.speed < 1 {
 					var_inst_detritus.speed = 1
