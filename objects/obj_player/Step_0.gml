@@ -1,6 +1,5 @@
 alpha_damage = lerp(alpha_damage, 0, lerp(0.05, 0.001, 0.001))
 
-
 // Comando para mapear todas as instâncias do objeto e medir qual a mais próxima
 with (obj_parente_asteroide) {
 	var _distance_actual_instance = point_distance(x, y, other.x, other.y)

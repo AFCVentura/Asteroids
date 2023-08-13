@@ -22,10 +22,10 @@
     {"name":"Speed","order":7,"path":"folders/Sprites/player_spaceship/Speed.yy",},
     {"name":"Triple Shoot","order":6,"path":"folders/Sprites/player_spaceship/Triple Shoot.yy",},
     {"name":"powerups","order":4,"path":"folders/Sprites/powerups.yy",},
-    {"name":"Speed","order":1,"path":"folders/Sprites/powerups/Speed.yy",},
+    {"name":"Double Shoot","order":4,"path":"folders/Sprites/powerups/Double Shoot.yy",},
     {"name":"Heavy","order":2,"path":"folders/Sprites/powerups/Heavy.yy",},
     {"name":"Sniper","order":3,"path":"folders/Sprites/powerups/Sniper.yy",},
-    {"name":"Double Shoot","order":4,"path":"folders/Sprites/powerups/Double Shoot.yy",},
+    {"name":"Speed","order":1,"path":"folders/Sprites/powerups/Speed.yy",},
     {"name":"Triple Shoot","order":5,"path":"folders/Sprites/powerups/Triple Shoot.yy",},
   ],
   "ResourceOrderSettings": [

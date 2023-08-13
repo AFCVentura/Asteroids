@@ -1,1 +1,0 @@
-var_rotacao = 0

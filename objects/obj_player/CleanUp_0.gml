@@ -1,0 +1,5 @@
+ds_map_destroy(map_pu_doubleshoot)
+ds_map_destroy(map_pu_heavy)
+ds_map_destroy(map_pu_sniper)
+ds_map_destroy(map_pu_speed)
+ds_map_destroy(map_pu_tripleshoot)
