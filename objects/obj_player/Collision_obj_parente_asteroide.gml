@@ -90,7 +90,7 @@ if alarm[0] <= 0
 	}
 	speed = lerp(1, 0, 0.1)
 	direction = angle_spaceship_asteroid - 180
-	sprite_index = spr_spaceship_idle_original
+	sprite_index = chosen_powerup_sprite_idle
 }
 
 

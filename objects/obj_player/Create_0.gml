@@ -1,4 +1,10 @@
+// Variável que controla a velocidade
 var_velocidade = 3
+
+// Variável que controla a velocidade da bala
+var_bullet_speed = (speed + 6) * 0.8
+powerup_bullet_speed_multiplier = 6
+
 var_direcao = 0
 vida_player = 5
 spd = speed
@@ -10,6 +16,7 @@ var_bullet_inst = 0
 spaceship_speed = speed
 color_damage = c_red
 alpha_damage = 0
+
 
 
 figure_powerup = 0
@@ -71,10 +78,11 @@ map_pu_heavy[? "Shield"] = 10
 map_pu_sniper[? "Shield"] = 1
 map_pu_speed[? "Shield"] = 1
 map_pu_tripleshoot[? "Shield"] = 1
-
-
-
 #endregion
 
-// Powerup atual
-actual_powerup = undefined
+// Variável se está ou não com powerup
+bool_powerup = false
+
+// Variável para os sprites dos powerups
+chosen_powerup_sprite_idle = spr_spaceship_idle_original
+chosen_powerup_sprite_moving = spr_spaceship_moving_original

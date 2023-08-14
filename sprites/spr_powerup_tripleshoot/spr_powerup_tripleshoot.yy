@@ -3,7 +3,7 @@
   "resourceVersion": "1.0",
   "name": "spr_powerup_tripleshoot",
   "bbox_bottom": 20,
-  "bbox_left": 0,
+  "bbox_left": 1,
   "bbox_right": 20,
   "bbox_top": 1,
   "bboxMode": 0,

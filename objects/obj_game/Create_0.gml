@@ -47,4 +47,3 @@ part_type_blend(global.particula_detrito, false)  // sobreposição de luz
 part_type_life(global.particula_detrito, 90, 100)  // tempo de vida da particula
 #endregion
 
-

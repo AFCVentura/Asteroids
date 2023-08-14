@@ -1,5 +1,7 @@
 alpha_damage = lerp(alpha_damage, 0, lerp(0.05, 0.001, 0.001))
 
+var_bullet_speed = (speed + powerup_bullet_speed_multiplier) * 0.8
+
 // Comando para mapear todas as instâncias do objeto e medir qual a mais próxima
 with (obj_parente_asteroide) {
 	var _distance_actual_instance = point_distance(x, y, other.x, other.y)
@@ -34,7 +36,7 @@ if alarm[0] <= 0 {
 		var _xx1 = x
 		var _yy1 = y 
 		var_bullet_inst = instance_create_layer(_xx1,_yy1,"Instances", obj_bullet) // variável que armazena o valor da instância
-		var_bullet_inst.speed = (speed + 6) * 0.8
+		var_bullet_inst.speed = var_bullet_speed
 		var_bullet_inst.direction = direction
 		var_bullet_inst.image_angle = direction
 	
@@ -58,8 +60,8 @@ if alarm[0] <= 0 {
 		var_direcao = approach(var_direcao, 180, 5)
 		direction += var_direcao
 		image_angle = direction
-	
-		sprite_index = spr_spaceship_moving_original
+		
+		sprite_index = chosen_powerup_sprite_idle
 	
 		// Se girou o suficiente, para de girar
 		if direction > 0 && direction < 30 || direction < 360 && direction > 330 {
@@ -77,7 +79,7 @@ if alarm[0] <= 0 {
 		direction += var_direcao
 		image_angle = direction
 	
-		sprite_index = spr_spaceship_moving_original
+		sprite_index = chosen_powerup_sprite_moving
 		speed = var_velocidade
 	
 		// Se girou o suficiente, para de girar
@@ -91,7 +93,7 @@ if alarm[0] <= 0 {
 	else{
 		if keyboard_check(ord("W")) && tempo_w > tempo_s
 		{  // Checando se o W foi apertado antes...
-			sprite_index = spr_spaceship_moving_original
+			sprite_index = chosen_powerup_sprite_moving
 			if keyboard_check(ord("S")){  // ... E se o S está sendo apertado também
 				speed = var_velocidade - (var_velocidade*2)
 			}
@@ -101,7 +103,7 @@ if alarm[0] <= 0 {
 		}
 		else if keyboard_check(ord("S")) && tempo_w < tempo_s
 		{  // Checando se o W foi apertado antes...
-			sprite_index = spr_spaceship_moving_original
+			sprite_index = chosen_powerup_sprite_moving
 			if keyboard_check(ord("W")){  // ... E se o W está sendo apertado também
 				speed = (var_velocidade * 2) - var_velocidade
 			}
@@ -112,7 +114,7 @@ if alarm[0] <= 0 {
 		else if !keyboard_check(ord("W")) && !keyboard_check(ord("S"))
 		{  // Checando se parou de apertar
 			speed = 0
-			sprite_index = spr_spaceship_idle_original
+			sprite_index = chosen_powerup_sprite_idle
 		}
 	}
 
@@ -120,7 +122,7 @@ if alarm[0] <= 0 {
 	if keyboard_check(ord("W")) && tempo_w == tempo_s
 	{  // Checando se apertou os dois ao mesmo tempo
 		speed = 0
-		sprite_index = spr_spaceship_idle_original
+		sprite_index = chosen_powerup_sprite_idle
 	}
 
 
@@ -152,7 +154,7 @@ if alarm[0] <= 0 {
 		direction += var_direcao
 		image_angle = direction
 	
-		sprite_index = spr_spaceship_moving_original
+		sprite_index = chosen_powerup_sprite_moving
 		speed = var_velocidade
 	
 		if direction > 240 && direction < 300{
@@ -166,7 +168,7 @@ if alarm[0] <= 0 {
 		direction += var_direcao
 		image_angle = direction
 	
-		sprite_index = spr_spaceship_moving_original
+		sprite_index = chosen_powerup_sprite_moving
 		speed = var_velocidade
 	
 		if direction > 60 && direction < 120{
@@ -224,7 +226,6 @@ if alarm[0] <= 0 {
 		tempo_d = 0
 	}
 }
-
 #endregion
 
 if vida_player <= 0
