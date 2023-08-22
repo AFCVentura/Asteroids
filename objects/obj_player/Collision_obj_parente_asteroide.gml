@@ -30,7 +30,7 @@ if alarm[0] <= 0
 		with other {
 			repeat (3)
 			{
-				var var_inst_asteroide2_shards = instance_create_layer(x,y, "Instances", obj_asteroid2_shards)
+				var var_inst_asteroide2_shards = instance_create_layer(self.x,self.y, "Instances", obj_asteroid2_shards)
 				var_inst_asteroide2_shards.image_index = incremento_sprite_shards
 				var_inst_asteroide2_shards.direction = obj_player.angle_spaceship_asteroid + incremento_direcao_shards
 				var_inst_asteroide2_shards.speed = other.speed - (other.speed * 0.50)

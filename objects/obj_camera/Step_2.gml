@@ -26,16 +26,22 @@ if instance_exists(view_target) {
 	var _target_x = view_target.x - global.camera_width_withzoom / 2
 	var _target_y = view_target.y - global.camera_height_withzoom / 2
 	
+	/*
 	// Clamp limita o valor min e max da variável
 	_target_x = clamp(_target_x, 0, room_width - global.camera_width_withzoom)
 	_target_y = clamp(_target_y, 0, room_height - global.camera_height_withzoom)
+	*/
 	
-	// Variável com x e y da câmera
+	// Variáveis com x e y da câmera antes
 	var _camera_x = camera_get_view_x(view_camera[0])
 	var _camera_y = camera_get_view_y(view_camera[0])
 	
+	// Variável com x e y da câmera depois
+	global.camera_x = lerp(global.camera_x, _target_x, view_speed)
+	global.camera_y = lerp(global.camera_y, _target_y, view_speed)
+	
 	// Mandando a camera seguir o player de forma suave
-	camera_set_view_pos(view_camera[0], lerp(_camera_x, _target_x, view_speed),lerp(_camera_y, _target_y, view_speed))
+	camera_set_view_pos(view_camera[0], global.camera_x, global.camera_y)
 }
 
 // Comando para setar tela cheia (F11)

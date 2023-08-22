@@ -45,6 +45,7 @@
     {"name":"obj_bullet","order":1,"path":"objects/obj_bullet/obj_bullet.yy",},
     {"name":"obj_pause","order":2,"path":"objects/obj_pause/obj_pause.yy",},
     {"name":"obj_terra","order":7,"path":"objects/obj_terra/obj_terra.yy",},
+    {"name":"bg","order":6,"path":"sprites/bg/bg.yy",},
     {"name":"spr_powerup_speed_figure","order":1,"path":"sprites/spr_powerup_speed_figure/spr_powerup_speed_figure.yy",},
     {"name":"spr_asteroid1","order":2,"path":"sprites/spr_asteroid1/spr_asteroid1.yy",},
     {"name":"spr_spaceship_moving_sniper","order":1,"path":"sprites/spr_spaceship_moving_sniper/spr_spaceship_moving_sniper.yy",},

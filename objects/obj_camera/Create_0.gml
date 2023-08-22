@@ -7,7 +7,7 @@ resolution_width = 1920
 resolution_height = 1080
 
 // Valor da divisão para fazer a câmera
-resolution_scale = 2
+resolution_scale = 1
 
 // Tamanho da câmera
 global.camera_width = resolution_width / resolution_scale
@@ -42,3 +42,7 @@ zoom_out_y = 0
 
 global.camera_width_withzoom = global.camera_width
 global.camera_height_withzoom = global.camera_height
+
+// Variáveis Globais para a câmera
+global.camera_x = obj_player.x - global.camera_width_withzoom/2
+global.camera_y = obj_player.y - global.camera_height_withzoom/2

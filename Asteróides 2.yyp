@@ -77,6 +77,7 @@
     {"id":{"name":"obj_pause","path":"objects/obj_pause/obj_pause.yy",},},
     {"id":{"name":"obj_terra","path":"objects/obj_terra/obj_terra.yy",},},
     {"id":{"name":"spr_powerup_doubleshoot","path":"sprites/spr_powerup_doubleshoot/spr_powerup_doubleshoot.yy",},},
+    {"id":{"name":"bg","path":"sprites/bg/bg.yy",},},
     {"id":{"name":"spr_powerup_speed_figure","path":"sprites/spr_powerup_speed_figure/spr_powerup_speed_figure.yy",},},
     {"id":{"name":"spr_asteroid1","path":"sprites/spr_asteroid1/spr_asteroid1.yy",},},
     {"id":{"name":"spr_spaceship_moving_sniper","path":"sprites/spr_spaceship_moving_sniper/spr_spaceship_moving_sniper.yy",},},
